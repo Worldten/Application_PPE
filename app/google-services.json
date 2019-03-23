@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "895966314523",
+    "firebase_url": "https://agence-du-soleil.firebaseio.com",
+    "project_id": "agence-du-soleil",
+    "storage_bucket": "agence-du-soleil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895966314523:android:78110dd2b8d99551",
+        "android_client_info": {
+          "package_name": "com.example.agence_du_soleil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895966314523-6ib6d9lnt47v0f0r8tskpogeiv5n59ju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1_RtvgHI3Wd8PWtI66gYpkTUaHJ6CViE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

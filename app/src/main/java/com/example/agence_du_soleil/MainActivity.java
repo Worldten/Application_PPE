@@ -3,7 +3,6 @@ package com.example.agence_du_soleil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,10 +29,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getString(R.string.app_name));
-        setSupportActionBar(toolbar);
-
         //get firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -54,16 +49,16 @@ public class MainActivity extends AppCompatActivity {
         Button btnChangePassword = findViewById(R.id.change_password_button);
         Button btnSendResetEmail = findViewById(R.id.sending_pass_reset_button);
         Button btnRemoveUser = findViewById(R.id.remove_user_button);
-        changeEmail = findViewById(R.id.changeEmail);
-        changePassword = findViewById(R.id.changePass);
-        sendEmail = findViewById(R.id.send);
-        remove = findViewById(R.id.remove);
+        changeEmail =  findViewById(R.id.changeEmail);
+        changePassword =  findViewById(R.id.changePass);
+        sendEmail =  findViewById(R.id.send);
+        remove =  findViewById(R.id.remove);
         Button signOut = findViewById(R.id.sign_out);
 
-        oldEmail = findViewById(R.id.old_email);
-        newEmail = findViewById(R.id.new_email);
-        password = findViewById(R.id.password);
-        newPassword = findViewById(R.id.newPassword);
+        oldEmail =  findViewById(R.id.old_email);
+        newEmail =  findViewById(R.id.new_email);
+        password =  findViewById(R.id.password);
+        newPassword =  findViewById(R.id.newPassword);
 
         oldEmail.setVisibility(View.GONE);
         newEmail.setVisibility(View.GONE);
@@ -74,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         sendEmail.setVisibility(View.GONE);
         remove.setVisibility(View.GONE);
 
-        progressBar = findViewById(R.id.progressBar);
+        progressBar =  findViewById(R.id.progressBar);
 
         if (progressBar != null) {
             progressBar.setVisibility(View.GONE);
@@ -97,11 +92,11 @@ public class MainActivity extends AppCompatActivity {
                 user.updateEmail(newEmail.getText().toString().trim())
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                Toast.makeText(MainActivity.this, "Email address is updated. Please sign in with new email id!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "L'adresse email a été mis à jour!", Toast.LENGTH_LONG).show();
                                 signOut();
                                 progressBar.setVisibility(View.GONE);
                             } else {
-                                Toast.makeText(MainActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "Erreur survenue lors de la mise à jour de l'email!", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(View.GONE);
                             }
                         });
@@ -126,17 +121,17 @@ public class MainActivity extends AppCompatActivity {
             progressBar.setVisibility(View.VISIBLE);
             if (user != null && !newPassword.getText().toString().trim().equals("")) {
                 if (newPassword.getText().toString().trim().length() < 6) {
-                    newPassword.setError("Password too short, enter minimum 6 characters");
+                    newPassword.setError("Mot de passe trop court, entrez au minium 6 caractères");
                     progressBar.setVisibility(View.GONE);
                 } else {
                     user.updatePassword(newPassword.getText().toString().trim())
                             .addOnCompleteListener(task -> {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(MainActivity.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "Le mot de passe a été mis à jour, connectez-vous avec votre nouveau mot de passe!", Toast.LENGTH_SHORT).show();
                                     signOut();
                                     progressBar.setVisibility(View.GONE);
                                 } else {
-                                    Toast.makeText(MainActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(MainActivity.this, "Une erreur est survenue!", Toast.LENGTH_SHORT).show();
                                     progressBar.setVisibility(View.GONE);
                                 }
                             });
@@ -164,10 +159,10 @@ public class MainActivity extends AppCompatActivity {
                 auth.sendPasswordResetEmail(oldEmail.getText().toString().trim())
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                Toast.makeText(MainActivity.this, "Reset password email is sent!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Email de réinitialisation de mot de passe envoyé!", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                             } else {
-                                Toast.makeText(MainActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Erreur lors de l'envoi de l'email de réinitialisation de mot de passe!", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                             }
                         });
@@ -183,12 +178,12 @@ public class MainActivity extends AppCompatActivity {
                 user.delete()
                         .addOnCompleteListener(task -> {
                             if (task.isSuccessful()) {
-                                Toast.makeText(MainActivity.this, "Your profile is deleted:( Create a account now!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Votre profil est supprimé:( Créer un compte maintenant!", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(MainActivity.this, SignupActivity.class));
                                 finish();
                                 progressBar.setVisibility(View.GONE);
                             } else {
-                                Toast.makeText(MainActivity.this, "Failed to delete your account!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(MainActivity.this, "Erreur survenue lors de la suppression du compte!", Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
                             }
                         });

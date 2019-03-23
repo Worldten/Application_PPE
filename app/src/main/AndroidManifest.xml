@@ -22,5 +22,6 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".SignupActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ResetPasswordActivity" />
     </application>
 </manifest>

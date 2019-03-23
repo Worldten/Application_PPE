@@ -13,21 +13,20 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // Buy
         Button buttonAchat = findViewById(R.id.button_achat);
         buttonAchat.setOnClickListener(v -> {
 
             Intent intent_achat = new Intent(HomeActivity.this, BuyingActivity.class);
             startActivity(intent_achat);
         });
-        // Rent
-        Button buttonLouer = findViewById(R.id.button_location);
+
+        Button buttonLouer = findViewById(R.id.button_louer);
         buttonLouer.setOnClickListener(v -> {
 
-            Intent intent_louer = new Intent(HomeActivity.this, LocationActivity.class);
+            Intent intent_louer = new Intent(HomeActivity.this, RentActivity.class);
             startActivity(intent_louer);
         });
-        // Sell
+
         Button buttonVendre = findViewById(R.id.button_vente);
         buttonVendre.setOnClickListener(v -> {
 

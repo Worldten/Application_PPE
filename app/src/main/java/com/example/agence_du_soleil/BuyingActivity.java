@@ -1,4 +1,13 @@
 package com.example.agence_du_soleil;
 
-public class BuyingActivity {
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class BuyingActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_buying);
+    }
 }

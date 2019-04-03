@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -13,25 +13,25 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button buttonAchat = findViewById(R.id.button_achat);
+        ImageButton buttonAchat = findViewById(R.id.button_achat);
         buttonAchat.setOnClickListener(v -> {
 
-            Intent intent_achat = new Intent(HomeActivity.this, BuyingActivity.class);
+            Intent intent_achat = new Intent(HomeActivity.this, Filter1.class);
             startActivity(intent_achat);
         });
 
-        Button buttonLouer = findViewById(R.id.button_louer);
+        ImageButton buttonLouer = findViewById(R.id.button_louer);
         buttonLouer.setOnClickListener(v -> {
 
             Intent intent_louer = new Intent(HomeActivity.this, RentActivity.class);
             startActivity(intent_louer);
         });
 
-        Button buttonVendre = findViewById(R.id.button_vente);
-        buttonVendre.setOnClickListener(v -> {
+        ImageButton buttonLogin = findViewById(R.id.button_login);
+        buttonLogin.setOnClickListener(v -> {
 
-            Intent intent_vente = new Intent(HomeActivity.this, SellActivity.class);
-            startActivity(intent_vente);
+            Intent intent_login = new Intent(HomeActivity.this, SignupActivity.class);
+            startActivity(intent_login);
         });
     }
 }

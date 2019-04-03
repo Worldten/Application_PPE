@@ -44,4 +44,14 @@
         <item name="android:layout_weight">1</item>
 
     </style>
+    <style name="MyEditTextTheme">
+        <!-- Used for the bottom line when not selected / focused -->
+        <item name="colorControlNormal">#fff</item>
+        <item name="colorControlActivated">#fff</item>
+        <item name="colorControlHighlight">#fff</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <!-- colorControlActivated & colorControlHighlight use the colorAccent color by default -->
+    </style>
 </resources>

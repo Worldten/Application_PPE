@@ -23,7 +23,7 @@
     <string name="hint_password">Mot de passe</string>
     <string name="hint_name">Nom</string>
     <string name="btn_login">SE CONNECTER</string>
-    <string name="btn_link_to_register">Pas encore membre? Inscrivez-vous dès maintenant!</string>
+    <string name="btn_link_to_register">Pas encore membre? Inscrivez-vous !</string>
     <string name="btn_link_to_login">Déjà inscris. Connectez-vous!</string>
     <string name="title_activity_reset_password">Réinitialisation mot de passe</string>
     <string name="btn_forgot_password">Mot de passe oublié?</string>

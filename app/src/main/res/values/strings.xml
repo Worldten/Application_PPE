@@ -41,4 +41,20 @@
     <string name="internet_check">Vérifier la connexion internet</string>
     <string name="internet_warning">L\\\'application nécessite une connexion Internet pour fonctionner correctement!</string>
     <string name="se_d_connecter">Se déconnecter</string>
+    <string name="mcarre">m²</string>
+    <string name="quelle_surface">Quelle surface ?</string>
+    <string name="surface_minimum">Surface minimum</string>
+    <string name="surface_maximum">Surface maximum</string>
+    <string name="nombre_de_pieces">Nombre de pièces :</string>
+    <string name="quel_est_votre_budget_maximum">Quel est votre budget maximum ?</string>
+    <string name="budget_maximal">Budget maximal</string>
+    <string name="euro">€</string>
+
+    <string-array name="pieces">
+        <item> 1</item>
+        <item> 2</item>
+        <item> 3</item>
+        <item> 4</item>
+        <item>5+</item>
+    </string-array>
 </resources>

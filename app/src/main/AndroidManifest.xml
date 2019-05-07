@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/logo_abeille"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".resultat_achat"></activity>
+        <activity android:name=".filtre_swipe"></activity>
+        <activity android:name=".resultat_achat" />
         <activity android:name=".Filter3" />
         <activity android:name=".Filter2" />
         <activity android:name=".Filter1" />

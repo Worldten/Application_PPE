@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageButton buttonAchat = findViewById(R.id.button_achat);
         buttonAchat.setOnClickListener(v -> {
 
-            Intent intent_achat = new Intent(HomeActivity.this, Filter1.class);
+            Intent intent_achat = new Intent(HomeActivity.this, filtre_swipe.class);
             startActivity(intent_achat);
         });
 

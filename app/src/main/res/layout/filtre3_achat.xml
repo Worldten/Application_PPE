@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6B1C8C"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="37dp">
+
+            <TextView
+                android:id="@+id/title_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quel_est_votre_budget_maximum"
+                android:textSize="25dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/budget_max"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/budget_maximal"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textColorHint="#d9d9d9"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/euros"
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:text="@string/euro"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#be6ae2"
+        android:gravity="bottom">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/dot3_1"/>
+
+        <Button
+            android:id="@+id/next1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="Suivant"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="220dp"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>-->
+
+</RelativeLayout>

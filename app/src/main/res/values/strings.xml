@@ -58,6 +58,7 @@
     <string name="quel_est_votre_budget_maximum">Quel est votre budget maximum ?</string>
     <string name="budget_maximal">Budget maximal</string>
     <string name="euro">€</string>
+    <string name="valider_button">Valider</string>
 
     <string-array name="pieces">
         <item> 1</item>

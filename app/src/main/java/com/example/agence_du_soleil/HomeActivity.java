@@ -3,6 +3,7 @@ package com.example.agence_du_soleil;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -30,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageButton buttonLogin = findViewById(R.id.button_login);
         buttonLogin.setOnClickListener(v -> {
 
-            Intent intent_login = new Intent(HomeActivity.this, SignupActivity.class);
+            Intent intent_login = new Intent(HomeActivity.this, LoginActivity.class);
             startActivity(intent_login);
         });
     }

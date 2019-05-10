@@ -24,7 +24,7 @@
     <string name="hint_name">Nom</string>
     <string name="btn_login">SE CONNECTER</string>
     <string name="btn_link_to_register">Pas encore membre? Inscrivez-vous !</string>
-    <string name="btn_link_to_login">Déjà inscris. Connectez-vous!</string>
+    <string name="btn_link_to_login">Déjà inscrit. Connectez-vous!</string>
     <string name="title_activity_reset_password">Réinitialisation mot de passe</string>
     <string name="btn_forgot_password">Mot de passe oublié?</string>
     <string name="btn_reset_password">Réinitialiser son mot de passe</string>
@@ -41,4 +41,11 @@
     <string name="internet_check">Vérifier la connexion internet</string>
     <string name="internet_warning">L\\\'application nécessite une connexion Internet pour fonctionner correctement!</string>
     <string name="se_d_connecter">Se déconnecter</string>
+    <string name="chateau">Chateau</string>
+    <string name="maison">Maison</string>
+    <string name="boutique">Boutique</string>
+    <string name="local_commercial">Local Commercial</string>
+    <string name="locaux">Locaux</string>
+    <string name="inclure_les_terrains_vierges">Inclure les terrains vierges</string>
+    <string name="suivant">Suivant</string>
 </resources>

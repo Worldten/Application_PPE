@@ -19,6 +19,8 @@ public class Filter1 extends AppCompatActivity {
 
             Intent intent_achat = new Intent(Filter1.this, Filter2.class);
             startActivity(intent_achat);
+
+
         });
     }
 }

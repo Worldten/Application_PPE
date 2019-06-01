@@ -1,13 +1,15 @@
-package com.example.agence_du_soleil;
+package com.example.agence_du_soleil.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SellActivity extends AppCompatActivity {
+import com.example.agence_du_soleil.R;
+
+public class RentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sell);
+        setContentView(R.layout.activity_rent);
     }
 }

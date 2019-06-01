@@ -1,4 +1,4 @@
-package com.example.agence_du_soleil;
+package com.example.agence_du_soleil.Filters;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.agence_du_soleil.Filters.CustomPagerAdapter;
+import com.example.agence_du_soleil.R;
 
 public class filtre_swipe extends Activity {
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:background="#6B1C8C"
-    tools:context="com.example.agence_du_soleil.LoginActivity">
+    tools:context="com.example.agence_du_soleil.Activities.LoginActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"

@@ -1,11 +1,12 @@
-package com.example.agence_du_soleil;
+package com.example.agence_du_soleil.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.ImageButton;
+
+import com.example.agence_du_soleil.R;
+import com.example.agence_du_soleil.Filters.filtre_swipe;
 
 public class HomeActivity extends AppCompatActivity {
 

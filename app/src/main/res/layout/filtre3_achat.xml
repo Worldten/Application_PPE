@@ -42,6 +42,33 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
+                android:id="@+id/euros2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:text="@string/euro"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/budget_min"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="Budget minimal"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textColorHint="#d9d9d9"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
                 android:id="@+id/euros"
                 android:layout_width="wrap_content"
                 android:layout_height="25dip"

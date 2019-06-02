@@ -19,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
         buttonAchat.setOnClickListener(v -> {
 
             Intent intent_achat = new Intent(HomeActivity.this, DetailsActivity.class);
+
             startActivity(intent_achat);
         });
 

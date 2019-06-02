@@ -42,7 +42,7 @@
     <string name="internet_warning">L\\\'application nécessite une connexion Internet pour fonctionner correctement!</string>
     <string name="se_d_connecter">Se déconnecter</string>
 
-    <string name="chateau">Chateau</string>
+    <string name="chateau">Château</string>
     <string name="maison">Maison</string>
     <string name="boutique">Boutique</string>
     <string name="local_commercial">Local Commercial</string>
@@ -61,6 +61,22 @@
     <string name="valider_button">Valider</string>
     <string name="titre_resultat">Résultat</string>
     <string name="titre_de_l_annonce">Titre de l\'annonce</string>
+    <string name="ville">Ville</string>
+    <string name="aix_en_provence">Aix-en-Provence</string>
+    <string name="maison_2_tages">Maison 2 étages</string>
+    <string name="_13080">13080</string>
+    <string name="code_postal">Code Postal</string>
+    <string name="prix_demand">Prix demandé</string>
+    <string name="_300_m">300 m²</string>
+    <string name="surface">Surface habitable</string>
+    <string name="nombre_de_pi_ces">Nombre de pièces</string>
+    <string name="_400_m">400 m²</string>
+    <string name="surface_du_terrain">Surface du terrain</string>
+    <string name="_3_all_e_des_jardiniers">3 allée des Jardiniers</string>
+    <string name="appartement">Appartement</string>
+
+    <string name="bureaux">Bureaux</string>
+    <string name="_600_000">600 000 $</string>
 
     <string-array name="pieces">
         <item> 1</item>

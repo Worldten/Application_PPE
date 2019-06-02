@@ -1,6 +1,5 @@
 package com.example.agence_du_soleil.Activities;
 
-import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,6 +19,7 @@ import java.util.ArrayList;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = "Corentin";
     ArrayList<Product> arrayList;
     ListView lv;
 
@@ -53,6 +53,7 @@ public class DetailsActivity extends AppCompatActivity {
                             jsonArray.getString(Integer.parseInt("lien_image"))
                     ));
                 }
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }

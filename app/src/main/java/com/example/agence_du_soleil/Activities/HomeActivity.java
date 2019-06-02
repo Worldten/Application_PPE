@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 
-import com.example.agence_du_soleil.Filters.Filtre_swipe;
 import com.example.agence_du_soleil.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -18,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageButton buttonAchat = findViewById(R.id.button_achat);
         buttonAchat.setOnClickListener(v -> {
 
-            Intent intent_achat = new Intent(HomeActivity.this, DetailsActivity.class);
+            Intent intent_achat = new Intent(HomeActivity.this, ListItemActivity.class);
 
             startActivity(intent_achat);
         });

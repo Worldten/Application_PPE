@@ -26,14 +26,14 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_try);
+        setContentView(R.layout.listview);
         arrayList = new ArrayList<>();
-        lv = findViewById(R.id.listView3);
+        lv = findViewById(R.id.lvMain);
 
         runOnUiThread(() -> new ReadJSON().execute("https://api.thomaszimmermann.fr/biens"));
     }
 
-    class ReadJSON extends AsyncTask<String, Integer, String> {
+    public class ReadJSON extends AsyncTask<String, Integer, String> {
 
         @Override
         protected String doInBackground(String... params) {
@@ -47,18 +47,17 @@ public class DetailsActivity extends AppCompatActivity {
                 JSONArray jsonArray =  jsonObject.getJSONArray("data");
 
                 for(int i =0;i<jsonArray.length(); i++){
-                    JSONObject productObject = jsonArray.getJSONObject(i);
                     arrayList.add(new Product(
-                            productObject.getString("nom_bien"),
-                            productObject.getString("prix_bien"),
-                            productObject.getString("lien_image")
+                            jsonArray.getString(Integer.parseInt("nom_bien")),
+                            jsonArray.getString(Integer.parseInt("prix_bien")),
+                            jsonArray.getString(Integer.parseInt("lien_image"))
                     ));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
             CustomListAdapter adapter = new CustomListAdapter(
-                    getApplicationContext(), R.layout.custom_list_layout, arrayList
+                    getApplicationContext(), R.layout.listview, arrayList
             );
             lv.setAdapter(adapter);
         }
@@ -77,7 +76,7 @@ public class DetailsActivity extends AppCompatActivity {
             String line;
             // read from the urlconnection via the bufferedreader
             while ((line = bufferedReader.readLine()) != null) {
-                content.append(line + "\n");
+                content.append(line).append("\n");
             }
             bufferedReader.close();
         } catch (Exception e) {

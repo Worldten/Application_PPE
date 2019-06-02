@@ -36,6 +36,7 @@
         <activity android:name=".Activities.Items" />
         <activity android:name=".Activities.Detail" />
         <activity android:name=".Activities.DetailsActivity" />
+        <activity android:name=".activity.main" />
     </application>
 
 </manifest>

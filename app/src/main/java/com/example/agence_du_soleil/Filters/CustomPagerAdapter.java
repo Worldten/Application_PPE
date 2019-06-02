@@ -1,10 +1,12 @@
-package com.example.agence_du_soleil;
+package com.example.agence_du_soleil.Filters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.agence_du_soleil.ModelObject;
 
 
 public class CustomPagerAdapter extends PagerAdapter {

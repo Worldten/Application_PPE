@@ -1,12 +1,11 @@
-package com.example.agence_du_soleil;
+package com.example.agence_du_soleil.Filters;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
+
+import com.example.agence_du_soleil.R;
 
 public class Filter1 extends AppCompatActivity {
 

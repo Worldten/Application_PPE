@@ -11,16 +11,10 @@
         android:roundIcon="@drawable/logo_abeille"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Filters.filtre_swipe"></activity>
+        <activity android:name=".Activities.Formulaire"></activity>
         <activity android:name=".resultat_achat" />
-        <activity android:name=".Filters.Filter3" />
-        <activity android:name=".Filters.Filter2" />
-        <activity android:name=".Filters.Filter1" />
-        <activity android:name=".Activities.RentActivity" />
-        <activity android:name=".Activities.SellActivity" />
-        <activity android:name=".Activities.BuyingActivity" />
         <activity
-            android:name=".Activities.HomeActivity"
+            android:name="Activities.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,14 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name="Activities.LoginActivity" />
         <activity
-            android:name=".Activities.MainActivity"
+            android:name="Activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activities.SignupActivity"
+            android:name="Activities.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.ResetPasswordActivity" />
+        <activity android:name="Activities.ResetPasswordActivity" />
     </application>
 
 </manifest>

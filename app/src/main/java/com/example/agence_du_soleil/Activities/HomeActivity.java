@@ -1,12 +1,13 @@
 package com.example.agence_du_soleil.Activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
 
-import com.example.agence_du_soleil.R;
 import com.example.agence_du_soleil.Filters.filtre_swipe;
+import com.example.agence_du_soleil.R;
+import com.example.agence_du_soleil.resultat_achat;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -25,7 +26,7 @@ public class HomeActivity extends AppCompatActivity {
         ImageButton buttonLouer = findViewById(R.id.button_louer);
         buttonLouer.setOnClickListener(v -> {
 
-            Intent intent_louer = new Intent(HomeActivity.this, RentActivity.class);
+            Intent intent_louer = new Intent(HomeActivity.this, resultat_achat.class);
             startActivity(intent_louer);
         });
 

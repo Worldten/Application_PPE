@@ -59,6 +59,7 @@
     <string name="budget_maximal">Budget maximal</string>
     <string name="euro">€</string>
     <string name="valider_button">Valider</string>
+    <string name="titre_resultat">Résultat</string>
 
     <string-array name="pieces">
         <item> 1</item>

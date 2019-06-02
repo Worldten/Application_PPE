@@ -119,7 +119,7 @@
             android:layout_marginLeft="20dp">
 
             <CheckBox
-                android:id="@+id/checkb_boutiue"
+                android:id="@+id/checkb_boutique"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
                 android:paddingLeft="10dp"

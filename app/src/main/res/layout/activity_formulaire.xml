@@ -9,54 +9,265 @@
     tools:context=".Activities.FormulaireActivity">
 
     //Wrapper Général
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="20dp"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ajouter un bien"
-                android:textSize="35dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
                 android:orientation="vertical"
-                android:padding="15dp">
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/titre_de_l_annonce"
-                    android:textSize="20dp"/>
+                    android:text="Ajouter un bien"
+                    android:textSize="35dp"/>
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Maison 2 étages"
-                    android:textColorHint="#9f9f9f"/>
             </LinearLayout>
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/titre_de_l_annonce"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/maison_2_tages"
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColor="#000"
+                        android:textColorHint="#9f9f9f"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Type de bien"
+                        android:textSize="20sp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radio_formulaire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radio_appartement"
+                                android:text="@string/appartement"
+                                android:buttonTint="@color/white"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                android:checked="true"
+                                />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radio_maison"
+                                android:text="@string/maison"
+                                android:buttonTint="@color/white"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                />
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radio_chateau"
+                                android:text="@string/chateau"
+                                android:buttonTint="@color/white"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/white"
+                                android:id="@+id/radio_boutique"
+                                android:text="Boutique"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radio_loc_commercial"
+                                android:buttonTint="@color/white"
+                                android:text="@string/local_commercial"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radio_bureaux"
+                                android:text="@string/bureaux"
+                                android:buttonTint="@color/white"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/radio_terrain"
+                                android:text="Terrain"
+                                android:buttonTint="@color/white"
+                                android:textColor="@color/white"
+                                android:shadowColor="@color/white"
+                                android:onClick="buttonclicked"
+                                />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adresse"
+                        android:textSize="20sp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:theme="@style/MyEditTextTheme"
+                        android:hint="@string/_3_all_e_des_jardiniers"
+                        android:textColorHint="#9f9f9f"
+                        android:textColor="#000"
+                        android:shadowColor="@color/white"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ville"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/aix_en_provence"
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColor="#000"
+                        android:textColorHint="#9f9f9f"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/code_postal"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:theme="@style/MyEditTextTheme"
+                        android:hint="@string/_13080"
+                        android:textColor="#000"
+                        android:textColorHint="#9f9f9f"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prix_demand"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/_600_000"
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColor="#000"
+                        android:textColorHint="#9f9f9f"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/surface"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/_300_m"
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColor="#000"
+                        android:textColorHint="#9f9f9f"/>
+                </LinearLayout>
+                <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -65,19 +276,60 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/titre_de_l_annonce"
+                    android:text="@string/nombre_de_pi_ces"
                     android:textSize="20dp"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Maison 2 étages"
-                    android:textColorHint="#9f9f9f"/>
+                    android:inputType="number"
+                    android:hint="5"
+                    android:textColorHint="#9f9f9f"
+                    android:theme="@style/MyEditTextTheme"
+                    android:textColor="#000"
+                    android:shadowColor="@color/white"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/surface_du_terrain"
+                        android:textSize="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:theme="@style/MyEditTextTheme"
+                        android:hint="@string/_400_m"
+                        android:textColorHint="#9f9f9f"
+                        android:textColor="#000"
+                        android:shadowColor="@color/white"/>
+                </LinearLayout>
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/valider_formulaire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/valider_button"
+                android:background="@drawable/round_corner"/>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
+
+
+
 
 
 </android.support.design.widget.CoordinatorLayout>

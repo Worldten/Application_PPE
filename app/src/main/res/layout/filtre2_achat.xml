@@ -82,12 +82,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             >
 
             <TextView
                 android:id="@+id/nbr_piece"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="35dp"
                 android:layout_marginLeft="12dp"
@@ -95,28 +95,77 @@
                 android:text="@string/nombre_de_pieces"
                 />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <RadioGroup
+                android:id="@+id/radio_recherche"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/layout_spinner_corner">
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner_pieces"
+                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:background="@null"
-                    >
+                    android:id="@+id/radio_piece1"
+                    android:text="1"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:onClick="buttonclicked"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_piece2"
+                    android:text="2"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:onClick="buttonclicked"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_piece3"
+                    android:text="3"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:onClick="buttonclicked"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_piece4"
+                    android:text="4"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:onClick="buttonclicked"
+                    android:checked="true"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_piece5etplus"
+                    android:text="5+"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:onClick="buttonclicked"
+                    android:checked="true"
+                    />
 
-                </Spinner>
+            </RadioGroup>
+
             </LinearLayout>
+
 
         </LinearLayout>
 
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"

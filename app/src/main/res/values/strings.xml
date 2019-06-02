@@ -66,7 +66,7 @@
     <string name="maison_2_tages">Maison 2 étages</string>
     <string name="_13080">13080</string>
     <string name="code_postal">Code Postal</string>
-    <string name="prix_demand">Prix demandé</string>
+    <string name="prix_demand">Loyer</string>
     <string name="_300_m">300 m²</string>
     <string name="surface">Surface habitable</string>
     <string name="nombre_de_pi_ces">Nombre de pièces</string>
@@ -76,7 +76,7 @@
     <string name="appartement">Appartement</string>
 
     <string name="bureaux">Bureaux</string>
-    <string name="_600_000">600 000 $</string>
+    <string name="_600_000">600€ / mois</string>
 
     <string-array name="pieces">
         <item> 1</item>

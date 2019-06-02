@@ -2,6 +2,7 @@ package com.example.agence_du_soleil.Activities;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
  */
 public class CustomListAdapter extends ArrayAdapter<Product> {
 
+    private static final String LOG_TAG = "Corentin";
     ArrayList<Product> products;
     Context context;
     int resource;
@@ -42,13 +44,16 @@ public class CustomListAdapter extends ArrayAdapter<Product> {
         Product product = getItem(position);
 
         ImageView imageView = convertView.findViewById(R.id.imageViewProduct);
-        Picasso.with(getContext()).load(product.getImage()).into(imageView);
+        Picasso.with(getContext()).load(product.getPrice()).into(imageView);
+        Log.i(LOG_TAG,"Image url is: "+product.getImage());
 
         TextView txtName = convertView.findViewById(R.id.txtName);
-        txtName.setText(product.getName());
+        txtName.setText(product.getImage());
+        Log.i(LOG_TAG,"Name is: "+product.getName());
 
         TextView txtPrice = convertView.findViewById(R.id.txtPrice);
-        txtPrice.setText(product.getPrice());
+        txtPrice.setText(product.getName());
+        Log.i(LOG_TAG,"Price is: "+product.getPrice());
 
         return convertView;
     }

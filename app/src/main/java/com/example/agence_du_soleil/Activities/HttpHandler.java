@@ -2,6 +2,8 @@ package com.example.agence_du_soleil.Activities;
 
 import android.util.Log;
 
+import com.example.agence_du_soleil.Filters.Filtre_swipe;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,6 +19,7 @@ class HttpHandler {
     private static final String TAG = HttpHandler.class.getSimpleName();
 
     HttpHandler() {
+        super();
     }
 
     String makeServiceCall(String reqUrl) {
@@ -39,6 +42,8 @@ class HttpHandler {
         }
         return response;
     }
+
+
 
     private String convertStreamToString(InputStream is) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));

@@ -1,13 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#6B1C8C"
+    android:orientation="vertical">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/quelle_surface"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/quelle_surface"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/surface_min"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/surface_minimum"
+                android:theme="@style/MyEditTextTheme"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textColorHint="#d9d9d9"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/value_unit_symbol_min"
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:text="@string/mcarre"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/surface_max"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/surface_maximum"
+                android:inputType="number"
+                android:theme="@style/MyEditTextTheme"
+                android:textColorHint="#d9d9d9"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/value_unit_symbol_max"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:text="@string/mcarre"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/layout_spinner_corner">
+
+                <Spinner
+                    android:id="@+id/spinner_pieces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@null"
+                    >
+
+                </Spinner>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6B1C8C"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="37dp">
+
+                    <TextView
+                        android:id="@+id/title_budget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quel_est_votre_budget_maximum"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <EditText
+                        android:id="@+id/budget_max"
+                        android:layout_width="370dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/budget_maximal"
+                        android:theme="@style/MyEditTextTheme"
+                        android:textColor="@color/white"
+                        android:layout_weight="1"
+                        android:textColorHint="#d9d9d9"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:id="@+id/euros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:text="@string/euro"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/validate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/valider_button"
+                    android:background="@drawable/round_corner"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#be6ae2"
+                    android:layout_gravity="bottom"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/dot3_3"/>
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dip"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#be6ae2"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/dot3_2"/>
+
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

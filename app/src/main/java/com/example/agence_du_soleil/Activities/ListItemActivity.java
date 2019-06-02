@@ -1,17 +1,24 @@
 package com.example.agence_du_soleil.Activities;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.agence_du_soleil.R;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.RequestCreator;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,8 +29,9 @@ import java.util.HashMap;
 
 public class ListItemActivity extends AppCompatActivity {
 
-    private String TAG = MainActivity.class.getSimpleName();
-
+    private String TAG = ListItemActivity.class.getSimpleName();
+    ListView listView;
+    String TAG_IMG = "image";
     private ProgressDialog pDialog;
     private ListView lv;
 
@@ -39,9 +47,12 @@ public class ListItemActivity extends AppCompatActivity {
         lv = findViewById(R.id.lvMain);
 
         new GetItems().execute();
+
+        listView = findViewById(R.id.lvMain);
+
+
     }
 
-    @SuppressLint("StaticFieldLeak")
     private class GetItems extends AsyncTask<Void, Void, Void> {
 
         @Override
@@ -75,7 +86,6 @@ public class ListItemActivity extends AppCompatActivity {
                     for (int i = 0; i < data.length(); i++) {
                         JSONObject c = data.getJSONObject(i);
 
-                        String type = c.getString("type_bien");
                         String nom = c.getString("nom_bien");
                         String ville = c.getString("ville_bien");
                         String address = c.getString("adresse1_bien");
@@ -84,16 +94,11 @@ public class ListItemActivity extends AppCompatActivity {
                         int piece = c.getInt("piece_bien");
                         int charge = c.getInt("charge_bien");
                         String cp = c.getString("cp_bien");
+                        String image = c.getString("lien_image");
 
-                        // Phone node is JSON Object
-//                        JSONObject phone = c.getJSONObject("phone");
-//                        String mobile = phone.getString("mobile");
-//                        String home = phone.getString("home");
-//                        String office = phone.getString("office");
 
                         HashMap<String, String> items = new HashMap<>();
 
-                        items.put("type", type );
                         items.put("nom", nom);
                         items.put("adresse", address);
                         items.put("prix", String.valueOf(prix));
@@ -102,9 +107,11 @@ public class ListItemActivity extends AppCompatActivity {
                         items.put("piece", String.valueOf(piece));
                         items.put("charge", String.valueOf(charge));
                         items.put("cp", cp);
+                        items.put("image", image);
 
                         itemsList.add(items);
                     }
+
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
                     runOnUiThread(() -> Toast.makeText(getApplicationContext(),
@@ -119,8 +126,12 @@ public class ListItemActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG)
                         .show());
             }
+
+
             return null;
         }
+
+
 
         @Override
         protected void onPostExecute(Void result) {
@@ -133,9 +144,11 @@ public class ListItemActivity extends AppCompatActivity {
              * */
             ListAdapter adapter = new SimpleAdapter(
                     ListItemActivity.this, itemsList,
-                    R.layout.activity_list_items, new String[]{"nom", "prix"}, new int[]{R.id.name_item});
+                    R.layout.listview, new String[]{"image", "nom", "prix", "surface", "piece", "ville", "charge"}, new int[]{R.id.img, R.id.nom_bien, R.id.prix_bien, R.id.surface_bien});
+
 
             lv.setAdapter(adapter);
+
         }
     }
 }

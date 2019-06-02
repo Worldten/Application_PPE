@@ -2,7 +2,7 @@ package com.example.agence_du_soleil;
 
 public enum ModelObject {
 
-    PINK(R.color.pink_color, R.layout.filtre1_achat),
+    //PINK(R.color.pink_color, R.layout.filtre1_achat),
     DEEP_ORANGE(R.color.deep_orange_color, R.layout.filtre2_achat),
     ORANGE(R.color.orange_color, R.layout.filtre3_achat);
 

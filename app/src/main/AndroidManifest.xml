@@ -3,6 +3,8 @@
     package="com.example.agence_du_soleil">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -29,7 +31,11 @@
             android:name=".Activities.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.ResetPasswordActivity" />
-        <activity android:name=".Filters.filtre_swipe"></activity>
+        <activity android:name=".Activities.ListItemActivity" />
+        <activity android:name=".Filters.Filtre_swipe" />
+        <activity android:name=".Activities.Items" />
+        <activity android:name=".Activities.Detail" />
+        <activity android:name=".Activities.DetailsActivity" />
     </application>
 
 </manifest>

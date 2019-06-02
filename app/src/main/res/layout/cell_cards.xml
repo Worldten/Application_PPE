@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:background="@drawable/backgroud"
-    tools:context=".resultat_achat">
+   >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,15 +22,22 @@
             tools:src="@drawable/maison" />
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/nom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:selectableItemBackground"
             android:padding="20dp"
-            tools:text="Paris"
             android:fontFamily="sans-serif"
             android:textColor="#333"
             android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/prix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+
     </LinearLayout>
 
 

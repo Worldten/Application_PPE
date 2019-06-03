@@ -130,22 +130,22 @@ public class ListItemActivity extends AppCompatActivity {
 
 
 
-//        @Override
-//        protected void onPostExecute(Void result) {
-//            super.onPostExecute(result);
-//            // Dismiss the progress dialog
-//            if (pDialog.isShowing())
-//                pDialog.dismiss();
-//
-//            ListAdapter adapter = new SimpleAdapter(
-//                    ListItemActivity.this, itemsList,
-//                    R.layout.listview, new String[]{"image", "nom", "prix", "surface", "piece", "ville", "charge"}, new int[]{R.id.img, R.id.nom_bien, R.id.prix_bien, R.id.surface_bien});
-//
-//
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            // Dismiss the progress dialog
+            if (pDialog.isShowing())
+                pDialog.dismiss();
+
+            ListAdapter adapter = new SimpleAdapter(
+                    ListItemActivity.this, itemsList,
+                    R.layout.listview, new String[]{"image", "nom", "prix", "surface", "piece", "ville", "charge"}, new int[]{R.id.img, R.id.nom_bien, R.id.prix_bien, R.id.surface_bien, R.id.ville_bien, R.id.charge_bien, R.id.piece_bien});
+
+
 //            ImageView ivBasicImage = findViewById(R.id.img);
 //            Picasso.with(getApplicationContext()).load(image).into(ivBasicImage);
-//            lv.setAdapter(adapter);
-//
-//        }
+            lv.setAdapter(adapter);
+
+        }
     }
 }

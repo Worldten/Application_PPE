@@ -13,17 +13,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.agence_du_soleil.Activities.ListItemActivity;
 import com.example.agence_du_soleil.R;
 import com.example.agence_du_soleil.resultat_achat;
 
 public class Filtre_swipe extends Activity {
 
-    private CheckBox appartement, chateau, maison, boutique, bureaux, local;
+
     private EditText ed1, ed2;
     private TextView text;
-    private Dialog filtre1;
     private Dialog filtre2;
-    private Dialog filtre3;
     RadioGroup rg;
     RadioButton rb;
 
@@ -31,13 +30,8 @@ public class Filtre_swipe extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filtre_swipe);
-        filtre1 = new Dialog(this,android.R.style.Theme_Translucent_NoTitleBar);
-        filtre2 = new Dialog(this,android.R.style.Theme_Translucent_NoTitleBar);
-        filtre3 = new Dialog(this,android.R.style.Theme_Translucent_NoTitleBar);
-       // filtre1.setContentView(R.layout.filtre1_achat);
-        filtre2.setContentView(R.layout.filtre2_achat);
-        filtre3.setContentView(R.layout.filtre3_achat);
-        rg = (RadioGroup)  filtre2.findViewById(R.id.radio_recherche);
+
+        rg = findViewById(R.id.radio_recherche);
         addListenerOnButton();
 
 
@@ -47,7 +41,7 @@ public class Filtre_swipe extends Activity {
 
     public void buttonclicked(View view){
         int radioButtonID = rg.getCheckedRadioButtonId();
-        rb = (RadioButton) filtre2.findViewById(radioButtonID);
+        rb = filtre2.findViewById(radioButtonID);
 
         boolean checked = ((RadioButton) view).isChecked();
         switch (radioButtonID){
@@ -72,33 +66,15 @@ public class Filtre_swipe extends Activity {
 
     public void addListenerOnButton() {
 
-        Button button = (Button) filtre3.findViewById(R.id.valider_recherche);
+        Button button = findViewById(R.id.validate);
         ed1 = findViewById(R.id.surface_min);
         ed2 = findViewById(R.id.surface_max);
 
         button.setOnClickListener(v -> {
-            StringBuffer result = new StringBuffer();
-            if (appartement.isChecked()) {
-                result.append("Appartement selectionné : ").append(appartement.isChecked());
-            }
-            if (chateau.isChecked()) {
-                result.append("Chateau selectionné : ").append(chateau.isChecked());
-            }
-            if (maison.isChecked()) {
-                result.append("\nMaison selectionnée :").append(maison.isChecked());
-            }
-            if (boutique.isChecked()) {
-                result.append("\nBoutique selectionnée :").append(boutique.isChecked());
-            }
-            if (bureaux.isChecked()) {
-                result.append("\nBureau selectionné: ").append(bureaux.isChecked());
-            }
-            if (local.isChecked()){
-                result.append("\nLocal selectionné : ").append(local.isChecked());
-            }
-            Intent intent_resultat = new Intent(Filtre_swipe.this, resultat_achat.class);
-            startActivity(intent_resultat);
-            text.setText(result);
+
+            Intent intent = new Intent(Filtre_swipe.this, ListItemActivity.class);
+            startActivity(intent);
+
         });
     }
 }

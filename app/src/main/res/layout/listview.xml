@@ -33,6 +33,50 @@
         android:layout_below="@+id/nom_bien"
         tools:text="Prix" />
 
+    <TextView
+        android:id="@+id/surface_bien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prix_bien"
+        android:layout_alignLeft="@+id/prix_bien"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="-19dp"
+        android:textColor="@android:color/black"
+        tools:text="Surface" />
+
+    <TextView
+        android:id="@+id/piece_bien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/surface_bien"
+        android:layout_alignLeft="@+id/surface_bien"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="-19dp"
+        android:textColor="@android:color/black"
+        tools:text="Pièces" />
+
+    <TextView
+        android:id="@+id/ville_bien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/piece_bien"
+        android:layout_alignLeft="@+id/piece_bien"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="-19dp"
+        android:textColor="@android:color/black"
+        tools:text="Pièces" />
+
+    <TextView
+        android:id="@+id/charge_bien"
+        android:layout_width="65dp"
+        android:layout_height="37dp"
+        android:layout_below="@+id/ville_bien"
+        android:layout_alignLeft="@+id/ville_bien"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="-20dp"
+        android:textColor="@android:color/black"
+        tools:text="Charges" />
+
     <ImageView
         android:id="@+id/prix_img"
         android:layout_width="19dp"

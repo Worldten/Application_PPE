@@ -2,6 +2,7 @@ package com.example.agence_du_soleil.Activities;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,16 +45,23 @@ public class CustomListAdapter extends ArrayAdapter<Product> {
         Product product = getItem(position);
 
         ImageView imageView = convertView.findViewById(R.id.imageViewProduct);
-        Picasso.with(getContext()).load(product.getPrice()).into(imageView);
+        Picasso.with(getContext()).load(product.getImage()).into(imageView);
         Log.i(LOG_TAG,"Image url is: "+product.getImage());
 
         TextView txtName = convertView.findViewById(R.id.txtName);
-        txtName.setText(product.getImage());
+        txtName.setText(product.getName());
         Log.i(LOG_TAG,"Name is: "+product.getName());
 
         TextView txtPrice = convertView.findViewById(R.id.txtPrice);
-        txtPrice.setText(product.getName());
+        txtPrice.setText(product.getPrice());
         Log.i(LOG_TAG,"Price is: "+product.getPrice());
+
+        TextView txtClass = convertView.findViewById(R.id.txtclass);
+        txtClass.setText(product.getClasse());
+        txtClass.setBackgroundColor(Color.parseColor(product.getCouleur(product.getClasse())));
+        Log.i(LOG_TAG,"Classe is: "+product.getPrice());
+        Log.i(LOG_TAG,"Couleur is: "+product.getCouleur(product.getClasse()));
+
 
         return convertView;
     }

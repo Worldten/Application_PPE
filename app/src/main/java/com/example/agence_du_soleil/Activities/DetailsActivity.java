@@ -47,19 +47,17 @@ public class DetailsActivity extends AppCompatActivity {
                 JSONArray jsonArray =  jsonObject.getJSONArray("data");
 
                 for(int i =0;i<jsonArray.length(); i++){
-                    arrayList.add(new Product(
-                            jsonArray.getString(Integer.parseInt("nom_bien")),
-                            jsonArray.getString(Integer.parseInt("prix_bien")),
-                            jsonArray.getString(Integer.parseInt("lien_image"))
-                    ));
+                    //arrayList.add(new Product(
+                            //jsonArray.getString(Integer.parseInt("nom_bien")),
+                            //jsonArray.getString(Integer.parseInt("prix_bien")),
+                            //jsonArray.getString(Integer.parseInt("lien_image"))
+                   // ));
                 }
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            CustomListAdapter adapter = new CustomListAdapter(
-                    getApplicationContext(), R.layout.listview, arrayList
-            );
+            CustomListAdapter adapter = new CustomListAdapter(getApplicationContext(), R.layout.listview, arrayList);
             lv.setAdapter(adapter);
         }
     }

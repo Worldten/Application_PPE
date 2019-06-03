@@ -28,13 +28,24 @@
             android:text="Product name"/>
 
         <TextView
-            android:id="@+id/txtPrice"
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="#101e99"
+        android:text="Price"/>
+
+        <TextView
+            android:id="@+id/txtclass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
-            android:textColor="#101e99"
-            android:text="Price"/>
+            android:textColor="@color/white"
+            android:layout_margin="4dp"
+            android:background="@drawable/round_corner_basic"
+            android:text="Classe"/>
 
     </LinearLayout>
 </LinearLayout>

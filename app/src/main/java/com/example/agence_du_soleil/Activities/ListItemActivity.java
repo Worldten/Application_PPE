@@ -5,16 +5,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.agence_du_soleil.R;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,22 +17,25 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+//import com.bumptech.glide.Glide;
+
 public class ListItemActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = "Merde";
     private String TAG = ListItemActivity.class.getSimpleName();
     ListView listView;
+    ArrayList<Product> itemsList;
     String TAG_IMG = "http://www.plaisancia.fr/typo3temp/_processed_/csm_maison-plaisancia-hericourt_f1763b14a9.jpg";
     private ProgressDialog pDialog;
     private ListView lv;
 
-    ArrayList<HashMap<String, String>> itemsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-
         itemsList = new ArrayList<>();
+
 
         lv = findViewById(R.id.lvMain);
 
@@ -92,21 +89,14 @@ public class ListItemActivity extends AppCompatActivity {
                         int charge = c.getInt("charge_bien");
                         String cp = c.getString("cp_bien");
                         String image = c.getString("lien_image");
+                        String classe_energ = c.getString("class_energetique_bien");
 
 
                         HashMap<String, String> items = new HashMap<>();
 
-                        items.put("nom", nom);
-                        items.put("adresse", address);
-                        items.put("prix", String.valueOf(prix));
-                        items.put("ville", ville);
-                        items.put("surface", String.valueOf(surface));
-                        items.put("piece", String.valueOf(piece));
-                        items.put("charge", String.valueOf(charge));
-                        items.put("cp", cp);
-                        items.put("image", image);
-
-                        itemsList.add(items);
+                        itemsList.add(new Product(
+                                image,nom,prix,ville,address,surface,piece,charge,cp,classe_energ
+                        ));
                     }
 
                 } catch (final JSONException e) {
@@ -137,13 +127,9 @@ public class ListItemActivity extends AppCompatActivity {
             if (pDialog.isShowing())
                 pDialog.dismiss();
 
-            ListAdapter adapter = new SimpleAdapter(
-                    ListItemActivity.this, itemsList,
-                    R.layout.listview, new String[]{"image", "nom", "prix", "surface", "piece", "ville", "charge"}, new int[]{R.id.img, R.id.nom_bien, R.id.prix_bien, R.id.surface_bien, R.id.ville_bien, R.id.charge_bien, R.id.piece_bien});
+            Log.i(LOG_TAG,"Image url is: "+itemsList.toString());
 
-
-//            ImageView ivBasicImage = findViewById(R.id.img);
-//            Picasso.with(getApplicationContext()).load(image).into(ivBasicImage);
+            CustomListAdapter adapter = new CustomListAdapter(getApplicationContext(), R.layout.listview, itemsList);
             lv.setAdapter(adapter);
 
         }

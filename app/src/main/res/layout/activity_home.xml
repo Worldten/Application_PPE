@@ -62,11 +62,7 @@
                         android:text="Rechercher un bien"
                         android:background="@drawable/round_corner"/>
 
-
-
                 </LinearLayout>
-
-
 
             </LinearLayout>
 
